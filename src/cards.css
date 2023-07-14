@@ -1,0 +1,18 @@
+.card-hover:hover {
+    background-color: #fbfbfb;
+    box-shadow: 0 8px 16px 0 rgb(29, 27, 27);
+}
+.fcard {
+    overflow: auto;
+
+}
+
+div::-webkit-scrollbar {
+    width: 10px;
+    height: auto;
+
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background: gainsboro;
+}
