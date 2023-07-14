@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
- import { Canvas } from 'react-three-fiber';
 
 // import Model from './modal';
 
