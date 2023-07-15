@@ -41,7 +41,6 @@ function App() {
         <Route path="/termsAndCondn" element={<TACPage />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicyPage />} />
         <Route path="/roomDesigning" element={<Room3D />} />
-        {/* <Route path="/modal" element={<Obj />} /> */}
       </Routes>
       <Footer />
     </Router>
