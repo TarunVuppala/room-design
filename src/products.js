@@ -40,7 +40,7 @@ function ProductsPage() {
 
   return (
     <>
-      <div className="container-fluid m-0 mb-2 p-2 pt-0">
+      <div className="container-fluid m-0 mb-2 p-2 pt-0" style={{ marginTop: '60px' }}>
         <p className="h4 display-5 m-0 d-flex align-items-center" style={{ height: '250px' }}>
           Products
         </p>

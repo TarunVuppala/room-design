@@ -1,8 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-// import Model from './modal';
-
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 import './App.css';
 
@@ -32,8 +29,9 @@ function App() {
   return (
     <Router>
       <NavigationBar />
+      <ScrollToTop />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/products" element={<ProductsPage />} />
@@ -56,4 +54,15 @@ function Home() {
     </>
   );
 }
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+  }, [pathname]);
+
+  return null;
+}
+
 export default App;

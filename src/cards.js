@@ -26,16 +26,10 @@ function Cards() {
                         </div>
                         <div className="col-md-8 col-lg-9 col-sm-7 col-7 container mt-1">
                             <div className="container p-3">
-                                <Link to='/' className="text-decoration-none text-primary h5">
-                                    Feature 1
+                                <Link to='/' className="text-decoration-none text-primary h5">Bringing your room into life.
                                 </Link>
                                 <p className="py-1 px-3">
-                                    What actually it is?It is all about... Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptatem quos voluptatibus aspernatur qui corporis modi ut aperiam ratione porro.
-                                    Saepe excepturi obcaecati explicabo eaque! Earum fuga illo numquam delectus vero fugit veniam voluptatum
-                                    repudiandae, reprehenderit pariatur distinctio hic aliquam adipisci eligendi iusto vel repellat. Nisi
-                                    necessitatibus, rerum illo quibusdam perferendis ut, vel nesciunt quam culpa accusamus at. Fugiat, ad
-                                    maxime?
+                                Experience the transformation of your room with our exceptional design services. We specialize in creating captivating and personalized designs that breathe new life into your space. From selecting the perfect color palette to arranging furniture and decor, we pay meticulous attention to detail to create a harmonious and inviting environment. Let us turn your vision into reality and create a room that reflects your unique style and personality.
                                 </p>
                             </div>
                         </div>
@@ -46,16 +40,10 @@ function Cards() {
                     <div className="row g-0 container">
                         <div className="col-md-8 col-lg-9 col-sm-7 col-7 container mt-1">
                             <div className="container p-3">
-                                <Link to='/' className="text-decoration-none text-primary h5">
-                                    Feature 2
+                                <Link to='/' className="text-decoration-none text-primary h5">Designs for everyone.
                                 </Link>
                                 <p className="py-1 px-3">
-                                    What actually it is?It is all about... Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptatem quos voluptatibus aspernatur qui corporis modi ut aperiam ratione porro.
-                                    Saepe excepturi obcaecati explicabo eaque! Earum fuga illo numquam delectus vero fugit veniam voluptatum
-                                    repudiandae, reprehenderit pariatur distinctio hic aliquam adipisci eligendi iusto vel repellat. Nisi
-                                    necessitatibus, rerum illo quibusdam perferendis ut, vel nesciunt quam culpa accusamus at. Fugiat, ad
-                                    maxime?
+                                Discover a world of design possibilities with our wide range of options. Whether you prefer contemporary minimalism or bold and vibrant styles, we have designs that cater to every taste. Our talented designers constantly push the boundaries of creativity to bring you fresh and inspiring designs. Explore our collection and find the perfect design to express your individuality and make a statement in your space.
                                 </p>
                             </div>
                         </div>
@@ -74,16 +62,10 @@ function Cards() {
                         </div>
                         <div className="col-md-8 col-lg-9 col-sm-7 col-7 container mt-1">
                             <div className="container p-3">
-                                <Link to='/' className="text-decoration-none text-primary h5">
-                                    Feature 3
+                                <Link to='/' className="text-decoration-none text-primary h5">Customize all elements.
                                 </Link>
                                 <p className="py-1 px-3">
-                                    What actually it is?It is all about... Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptatem quos voluptatibus aspernatur qui corporis modi ut aperiam ratione porro.
-                                    Saepe excepturi obcaecati explicabo eaque! Earum fuga illo numquam delectus vero fugit veniam voluptatum
-                                    repudiandae, reprehenderit pariatur distinctio hic aliquam adipisci eligendi iusto vel repellat. Nisi
-                                    necessitatibus, rerum illo quibusdam perferendis ut, vel nesciunt quam culpa accusamus at. Fugiat, ad
-                                    maxime?
+                                Personalize every element of your interior design to create a space that truly reflects your style. From choosing colors and materials to customizing furniture and accessories, we provide the tools and expertise to bring your unique vision to life. Embrace your individuality and create a space that is uniquely yours.
                                 </p>
                             </div>
                         </div>
@@ -95,16 +77,10 @@ function Cards() {
                     <div className="row g-0 container">
                         <div className="col-md-8 col-lg-9 col-sm-7 col-7 container mt-1">
                             <div className="container p-3">
-                                <Link to='/' className="text-decoration-none text-primary h5">
-                                    Feature 4
+                                <Link to='/' className="text-decoration-none text-primary h5">Providing assistance and inspiration.
                                 </Link>
                                 <p className="py-1 px-3">
-                                    What actually it is?It is all about... Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptatem quos voluptatibus aspernatur qui corporis modi ut aperiam ratione porro.
-                                    Saepe excepturi obcaecati explicabo eaque! Earum fuga illo numquam delectus vero fugit veniam voluptatum
-                                    repudiandae, reprehenderit pariatur distinctio hic aliquam adipisci eligendi iusto vel repellat. Nisi
-                                    necessitatibus, rerum illo quibusdam perferendis ut, vel nesciunt quam culpa accusamus at. Fugiat, ad
-                                    maxime?
+                                Let us take care of all your design needs with our comprehensive services. We provide a seamless integration of all the features you need for your website. Whether it's smart home integration, audiovisual systems, or connecting with other platforms and technologies, we have the expertise to make it happen. Enjoy the convenience and efficiency of a fully integrated space tailored to your requirements.
                                 </p>
                             </div>
                         </div>
@@ -124,16 +100,10 @@ function Cards() {
                         </div>
                         <div className="col-md-8 col-lg-9 col-sm-7 col-7 container mt-1">
                             <div className="container p-3">
-                                <Link to='/' className="text-decoration-none text-primary h5">
-                                    Feature 5
+                                <Link to='/' className="text-decoration-none text-primary h5">Budget planning.
                                 </Link>
                                 <p className="py-1 px-3">
-                                    What actually it is?It is all about... Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptatem quos voluptatibus aspernatur qui corporis modi ut aperiam ratione porro.
-                                    Saepe excepturi obcaecati explicabo eaque! Earum fuga illo numquam delectus vero fugit veniam
-                                    voluptatum repudiandae, reprehenderit pariatur distinctio hic aliquam adipisci eligendi iusto vel
-                                    repellat. Nisi necessitatibus, rerum illo quibusdam perferendis ut, vel nesciunt quam culpa accusamus
-                                    at. Fugiat, ad maxime?
+                                Customize your design within your desired budget range. We provide a wide range of options for you to choose from, allowing you to select the elements that fit your budget. Whether you have a modest budget or are looking for luxury options, we can accommodate your needs. Simply specify your budget range, and we will show you the available options within that range, ensuring that you can create your dream space without compromising on quality.
                                 </p>
                             </div>
                         </div>
@@ -146,16 +116,10 @@ function Cards() {
 
                         <div className="col-md-8 col-lg-9 col-sm-7 col-7 container mt-1">
                             <div className="container p-3">
-                                <Link to='/' className="text-decoration-none text-primary h5">
-                                    Feature 6
+                                <Link to='/' className="text-decoration-none text-primary h5">Integration with other platforms.
                                 </Link>
                                 <p className="py-1 px-3">
-                                    What actually it is?It is all about... Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptatem quos voluptatibus aspernatur qui corporis modi ut aperiam ratione porro.
-                                    Saepe excepturi obcaecati explicabo eaque! Earum fuga illo numquam delectus vero fugit veniam
-                                    voluptatum repudiandae, reprehenderit pariatur distinctio hic aliquam adipisci eligendi iusto vel
-                                    repellat. Nisi necessitatibus, rerum illo quibusdam perferendis ut, vel nesciunt quam culpa accusamus
-                                    at. Fugiat, ad maxime?
+                                Seamlessly integrate your space with other platforms and technologies. From smart home features to IoT devices, we have the expertise to make it happen. Stay connected and enjoy the convenience and efficiency of a fully integrated space. Let us enhance your lifestyle with our integration services.
                                 </p>
                             </div>
                         </div>

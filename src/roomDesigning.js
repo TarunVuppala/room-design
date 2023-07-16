@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
@@ -13,35 +13,38 @@ const Room3D = () => {
   const camera = useRef(null);
   const scene = useRef(null);
   const controls = useRef(null);
-
-  const zoomIn = () => {
-    camera.current.position.z -= 0.1;
-  };
+  const targetRotation = useRef(new THREE.Euler(0, 0, 0));
+  const targetZoom = useRef(1);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const zoomOut = () => {
-    camera.current.position.z += 0.1;
+    if (isAnimating) return;
+    setIsAnimating(true);
+    targetZoom.current -= 0.3;
   };
 
+  const zoomIn = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    targetZoom.current += 0.3;
+  };
+
+  const rotationStep = Math.PI / 9;
+
   const rotateLeft = () => {
-    scene.current.rotation.y += Math.PI / 9; // Rotate left by 45 degrees
+    targetRotation.current.y += rotationStep;
   };
 
   const rotateRight = () => {
-    scene.current.rotation.y -= Math.PI / 9; // Rotate right by 45 degrees
+    targetRotation.current.y -= rotationStep;
   };
 
   const rotateUp = () => {
-    camera.current.position.y += 1;
-    // scene.current.rotation.x += Math.PI / 9; // Rotate up by 45 degrees
-    // camera.current.position.y += Math.PI / 9;
-    // camera.current.position.x += Math.PI / 9;
+    targetRotation.current.x += rotationStep;
   };
 
   const rotateDown = () => {
-    camera.current.position.y -= 1;
-    // scene.current.rotation.x -= Math.PI / 9; // Rotate down by 45 degrees
-    // camera.current.position.y -= Math.PI / 9;
-    // camera.current.position.x -= Math.PI / 9;
+    targetRotation.current.x -= rotationStep;
   };
 
   useEffect(() => {
@@ -51,13 +54,13 @@ const Room3D = () => {
     scene.current = new THREE.Scene();
 
     // Create a camera
-    camera.current = new THREE.PerspectiveCamera(75,
+    camera.current = new THREE.PerspectiveCamera(
+      75,
       window.innerWidth / window.innerHeight,
       0.1,
-      1000);
-    camera.current.position.z = 7;
-    camera.current.position.x = 5;
-    camera.current.position.y = 2;
+      1000
+    );
+    camera.current.position.set(2, 3, 7);
 
     // Create renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -69,7 +72,7 @@ const Room3D = () => {
     loader.load(room, (gltf) => {
       scene.current.add(gltf.scene);
 
-      // Add lighting to the model
+      // Modify materials
       gltf.scene.traverse((child) => {
         if (child.isMesh) {
           child.material.side = THREE.DoubleSide; // Enable double-sided rendering
@@ -77,6 +80,8 @@ const Room3D = () => {
           child.material.roughness = 0.8; // Adjust the material's roughness property
         }
       });
+
+      scene.current.add(gltf.scene);
     });
 
     // Create lighting
@@ -95,8 +100,27 @@ const Room3D = () => {
     // Render loop
     const animate = () => {
       requestAnimationFrame(animate);
+
+      // Smoothly interpolate the rotation towards the target rotation
+      scene.current.rotation.x += (targetRotation.current.x - scene.current.rotation.x) * 0.05;
+      scene.current.rotation.y += (targetRotation.current.y - scene.current.rotation.y) * 0.05;
+      scene.current.rotation.z += (targetRotation.current.z - scene.current.rotation.z) * 0.05;
+
+      // Smoothly interpolate the zoom towards the target zoom
+      const currentZoom = camera.current.zoom;
+      camera.current.zoom += (targetZoom.current - currentZoom) * 0.05;
+      camera.current.updateProjectionMatrix();
+
+      // Check if zoom transition is completed
+      if (Math.abs(targetZoom.current - currentZoom) < 0.01) {
+        camera.current.zoom = targetZoom.current;
+        camera.current.updateProjectionMatrix();
+        setIsAnimating(false);
+      }
+
       renderer.render(scene.current, camera.current);
     };
+
     animate();
 
     // Cleanup on unmount
@@ -108,8 +132,8 @@ const Room3D = () => {
   }, []);
 
   return (
-    <div>
-      <div className="d-flex justify-content-center align-items-center m-0">
+    <div style={{ marginTop: '60px' }}>
+      <div className="d-flex justify-content-center align-items-center m-0 bg-light">
         <button className="btn btn-sm btn-primary me-2" onClick={zoomIn}>
           <FontAwesomeIcon icon={faSearchPlus} /> Zoom In
         </button>

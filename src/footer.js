@@ -5,10 +5,7 @@ import { NavLink } from 'react-router-dom';
 import './footer.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faHome, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faLinkedinIn, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -21,8 +18,8 @@ function Footer() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Code to handle submit
-        console.log('Search submitted:', inputTerm);
+        //
+        console.log('Submitted:', inputTerm);
     };
     return (
         <>

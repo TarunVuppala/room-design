@@ -1,34 +1,19 @@
 import React from 'react';
-// import { useState } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 import LoginPage from './login'
 import SignUpPage from './signUp'
 
-
 function NavigationBar() {
-  // const [searchTerm, setSearchTerm] = useState('');
-
-  // const handleSearchInputChange = (event) => {
-  //   setSearchTerm(event.target.value);
-  // };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   // Code to handle search
-  //   console.log('Search submitted:', searchTerm);
-  // };
 
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-success sticky-top fixed-top">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-md bg-secondary border-bottom border-dark fixed-top" style={{ height: '60px' }}>
+      <div className="container-fluid d-flex align-items-center">
         {/* Brand name */}
-        <Link className="navbar-brand" to="/">The Decor Nest</Link>
+        <Link className="navbar-brand ms-auto" to="/">The Decor Nest</Link>
 
         {/* Toggler icon */}
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler order-first" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
 
@@ -51,19 +36,6 @@ function NavigationBar() {
           {/* Login */}
           <SignUpPage />
           <LoginPage />
-          {/* Search form */}
-          {/* <form onSubmit={handleSubmit} className="d-flex border rounded-pill">
-            <input
-              type="search"
-              placeholder="Search..."
-              className="form-control me-2 border-0 bg-transparent"
-              value={searchTerm}
-              onChange={handleSearchInputChange}
-            />
-            <button type="submit" className="btn rounded-pill ">
-              <FontAwesomeIcon icon={faSearch} size="lg" />
-            </button>
-          </form> */}
         </div>
       </div>
     </nav>
