@@ -60,40 +60,37 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-lg-4 col-sm-12 col-md-6 bg-dark text-light">
-                        <div className="container">
-                            <div className="row">
-
-                                <div className=" container-fluid" style={{ height: "auto" }}>
-                                    <div className=" row">
-                                        <p className="h5 ps-2 pt-4 border-bottom pd-1 " style={{ width: "fit-content" }}>Write to Us...</p>
-                                        <form className="mail-form d-flex align-items-center justify-content-between border-bottom pb-2 " onSubmit={handleSubmit} id="dform">
-                                            <FontAwesomeIcon icon={faEnvelope} size="lg" />
-                                            <input className="data border-0 bg-transparent ps-3" style={{ width: "100%", color: "#ccc", outline: "none" }} value={inputTerm}
-                                                onChange={handleSubmitInputChange}
-                                                placeholder="Enter your mail" required />
-                                            <button className="sendBtn border-0 bg-transparent" style={{ outline: "none", color: "#ccc" }} type="submit" ><FontAwesomeIcon icon={faArrowRight} size="lg" />
-                                            </button>
-                                        </form>
-                                    </div>
-                                    <div className="row">
-                                        <p className="h5 ps-2 my-4  border-bottom" style={{ width: "fit-content" }}>Social Media</p>
-                                        <ul className="list-inline d-flex flex-row align-items-center justify-content-around">
-                                            <li className="">
-                                                <Link to="/"><FontAwesomeIcon icon={faFacebookF} className="fa-xl" style={{ color: "#ffffff" }} />
-                                                </Link></li>
-                                            <li className="">
-                                                <Link to="/"><FontAwesomeIcon icon={faLinkedinIn} className="fa-xl" style={{ color: "#ffffff" }} />
-                                                </Link></li>
-                                            <li className="">
-                                                <Link to="/"><FontAwesomeIcon icon={faTwitter} className="fa-xl" style={{ color: "#ffffff" }} />
-                                                </Link></li>
-                                            <li className="">
-                                                <Link to="/"><FontAwesomeIcon icon={faInstagram} className="fa-xl" style={{ color: "#ffffff" }} />
-                                                </Link></li>
-                                        </ul>
-                                    </div>
+                    <div className="container-fluid col-lg-4 col-sm-12 col-md-6 bg-dark text-light ">
+                        <div className="container-fluid " style={{ height: "auto" }}>
+                            <div className="row" style={{ height: "50%" }}>
+                                <p className="h5 ps-2 pt-4 ms-0 ps-0 mb-3 border-bottom " style={{ width: "fit-content" }}>Write to Us...</p>
+                                <div className="ms-3">
+                                    <form className="mail-form w-100 d-flex align-items-center justify-content-between border-bottom mb-2 pb-0" onSubmit={handleSubmit} id="dform">
+                                        <FontAwesomeIcon className='m-0 p-0 ' icon={faEnvelope} size="lg" />
+                                        <input className="data w-100 border-0 bg-transparent ms-2 p-0" style={{ width: "100%", color: "#ccc", outline: "none" }} value={inputTerm}
+                                            onChange={handleSubmitInputChange}
+                                            placeholder="Enter your mail" required />
+                                        <button className="sendBtn  bg-transparent m-0 p-0" style={{ width: "30px", outline: "none", color: "#ccc" }} type="submit" ><FontAwesomeIcon icon={faArrowRight} size="lg" />
+                                        </button>
+                                    </form>
                                 </div>
+                            </div>
+                            <div className="row" style={{ height: "50%" }}>
+                                <p className="h5 ps-2 my-4 border-bottom" style={{ width: "fit-content" }}>Social Media</p>
+                                <ul className="list-inline d-flex flex-row align-items-center justify-content-around">
+                                    <li className="">
+                                        <Link to="/"><FontAwesomeIcon icon={faFacebookF} className="fa-xl" style={{ color: '#1877F2' }} />
+                                        </Link></li>
+                                    <li className="">
+                                        <Link to="/"><FontAwesomeIcon icon={faLinkedinIn} className="fa-xl" sstyle={{ color: '#1DA1F2' }} />
+                                        </Link></li>
+                                    <li className="">
+                                        <Link to="/"><FontAwesomeIcon icon={faTwitter} className="fa-xl" style={{ color: '#2867B2' }} />
+                                        </Link></li>
+                                    <li className="">
+                                        <Link to="/"><FontAwesomeIcon icon={faInstagram} className="fa-xl" style={{ color: '#C13584' }} />
+                                        </Link></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
